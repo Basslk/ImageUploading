@@ -1,0 +1,23 @@
+@model ImageUploading.Models.Product
+
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.ProductName)
+</div>
+<div class="editor-field">
+  @Html.EditorFor(model => model.ProductName)
+    @Html.ValidationMessageFor(model => model.ProductName)
+</div>
+
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.ProductImageUrl)
+</div>
+<div class="editor-field">
+  @Html.HiddenFor(model => model.ProductImageUrl)
+    <input type="file" name="image"  />
+    <input type="file" name="image"  />
+    
+</div>
+
